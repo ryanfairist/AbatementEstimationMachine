@@ -115,9 +115,9 @@ export function ProjectForm() {
               name="address"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Project Address</FormLabel>
+                  <FormLabel>Project Zip Code</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g. 123 Main St, Anytown, NJ" {...field} />
+                    <Input placeholder="e.g. 12345 or 12345-6789" {...field} pattern="^\d{5}(?:[-\s]\d{4})?$" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
